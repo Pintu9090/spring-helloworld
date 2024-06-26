@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_REPO = "https://hub.docker.com/repository/docker/pintu9090/pintu_repo"
+        DOCKER_REPO = "pintu9090/pintu_repo"
     }
     
     stages {
