@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Pintu9090/spring-helloworld'
+                git branch: 'main', url: 'https://github.com/Pintu9090/spring-helloworld',
+                credentialsId: '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'    
+                
             }
         }
         
