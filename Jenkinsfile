@@ -2,13 +2,13 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_REPO = "your-dockerhub-username/your-repo-name"
+        DOCKER_REPO = "https://hub.docker.com/repository/docker/pintu9090/pintu_repo"
     }
     
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/your-repo.git'
+                git branch: 'main', url: 'https://github.com/Pintu9090/spring-helloworld'
             }
         }
         
