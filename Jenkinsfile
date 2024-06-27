@@ -31,7 +31,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dckr_pat_BeJ6JpQddDdEcqaEs-82ReZB6No') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerCredential') {
                         docker.image("${DOCKER_REPO}:${env.BUILD_NUMBER}").push()
                         docker.image("${DOCKER_REPO}:${env.BUILD_NUMBER}").push("latest")
                     }
