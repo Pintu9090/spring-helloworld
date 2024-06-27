@@ -39,10 +39,10 @@ pipeline {
             }
         }
         
-        stage('Run Docker') {
+       /* stage('Run Docker') {
             steps {
                 sh "docker run -d -p 8080:8080 ${DOCKER_REPO}:${env.BUILD_NUMBER}"
             }
-        }
+        }*/
     }
 }
